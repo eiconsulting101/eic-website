@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Elevate Impact Consulting | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header>
+  <div class="layout nav">
+    <!-- Brand -->
+<a href="index.html" class="brand">
+  <div class="brand-logo">
+    <img src="eic-logo.png" alt="Elevate Impact Consulting logo">
+  </div>
+  <div class="brand-text">
+    <strong>EIC · Elevate Impact</strong>
+    <span>Student Pro Bono Consulting</span>
+  </div>
+</a>
+
+    <!-- Mobile hamburger -->
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+
+    <!-- Desktop navigation -->
+    <nav class="nav-links" id="nav-desktop">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="join.html">Join Us</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="layout" id="nav-mobile" style="display:none;">
+    <nav class="nav-links-mobile">
+      <a href="index.html" class="active" onclick="closeNav()">Home</a>
+      <a href="about.html" onclick="closeNav()">About</a>
+      <a href="services.html" onclick="closeNav()">Services</a>
+      <a href="join.html" onclick="closeNav()">Join Us</a>
+      <a href="contact.html" class="nav-cta" onclick="closeNav()">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  <main id="top">
+    <div class="layout">
+
+      <section class="hero">
+        <div>
+          <div class="hero-kicker">Elevate Impact Consulting · EIC</div>
+          <div class="hero-highlight">
+            <span>&gt;</span>
+            Student-run. Pro bono. Real experience and impact.
+          </div>
+          <h1 class="hero-title">
+            A student association built to <span>elevate impact</span> for real organizations.
+          </h1>
+          <p class="hero-subtitle">
+            Elevate Impact Consulting (EIC) is a brand-new, student-led, pro bono consulting
+            association. We partner with non-profits, small businesses, and community organizations while giving students a safe place to learn how consulting actually works.
+
+          </p>
+
+          <div class="hero-actions">
+            <a href="join.html" class="btn-primary">Join EIC</a>
+            <a href="services.html" class="btn-secondary">See what we do</a>
+          </div>
+
+          <div class="hero-metas">
+            <div>
+              <strong>Just getting started</strong>
+              We’re early-stage: building our first team, projects, and partners.
+            </div>
+            <div>
+              <strong>Experience over ego</strong>
+              The focus now is learning, structure, and doing solid work — not flexing case stats.
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-card-header">
+            <div class="hero-card-title">
+              <strong>Where EIC is today</strong>
+              Honest snapshot of a new association.
+            </div>
+            <span class="hero-chip">Early stage</span>
+          </div>
+          <p>
+            No big case results yet — we’re forming our founding team and designing our first
+            pro bono engagements.
+          </p>
+          <ul>
+            <li>Student-made, student-run collective.</li>
+            <li>Focused on learning by doing real work.</li>
+            <li>Open to pilot projects with patient partners.</li>
+          </ul>
+          <p>
+            If you like the idea of growing alongside us — as a member or a client — this is the perfect time.
+          </p>
+        </aside>
+      </section>
+
+      <section>
+        <div class="section-header">
+          <div class="section-kicker">At a glance</div>
+          <h2 class="section-title">What Elevate Impact Consulting is about.</h2>
+          <p class="section-desc">
+            We’re building a space where students can practice consulting skills on real projects,
+            and where organizations get thoughtful, structured support at no cost.
+          </p>
+        </div>
+        <div class="grid service-grid">
+          <article class="card">
+            <h3>Student-led</h3>
+            <p>
+              Built and run by students who want more than just theory — they want to actually
+              work on real problems.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Pro bono</h3>
+            <p>
+              We don’t charge fees. In return, we ask for partners who are patient and open to working with a learning-focused team.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Learning first</h3>
+            <p>
+              Our “win” is skill-building, not revenue. Everything is designed so members can talk about real experience in interviews.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-inner">
+          <div>© <span id="year"></span> Elevate Impact Consulting (EIC). Student-led &amp; pro bono.</div>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+<script>
+  function toggleNav() {
+    const nav = document.getElementById("nav-mobile");
+    nav.style.display =
+      nav.style.display === "none" || nav.style.display === "" ? "block" : "none";
+  }
+
+  function closeNav() {
+    const nav = document.getElementById("nav-mobile");
+    nav.style.display = "none";
+  }
+
+  // keep footer year working if you’re using it
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+</script>
+
+
+</body>
+</html>

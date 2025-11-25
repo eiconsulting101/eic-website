@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Elevate Impact Consulting | Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header>
+  <div class="layout nav">
+<a href="index.html" class="brand">
+  <div class="brand-logo">
+    <img src="eic-logo.png" alt="Elevate Impact Consulting logo">
+  </div>
+  <div class="brand-text">
+    <strong>EIC · Elevate Impact</strong>
+    <span>Student Pro Bono Consulting</span>
+  </div>
+</a>
+
+    <!-- Mobile menu button -->
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+
+    <!-- Desktop navigation -->
+    <nav class="nav-links" id="nav-desktop">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="join.html">Join Us</a>
+      <a href="contact.html" class="nav-cta active">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Mobile navigation -->
+  <div class="layout" id="nav-mobile" style="display:none;">
+    <nav class="nav-links-mobile">
+      <a href="index.html" class="active" onclick="closeNav()">Home</a>
+      <a href="about.html" onclick="closeNav()">About</a>
+      <a href="services.html" onclick="closeNav()">Services</a>
+      <a href="join.html" onclick="closeNav()">Join Us</a>
+      <a href="contact.html" class="nav-cta active" onclick="closeNav()">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+  <main>
+    <div class="layout">
+      <section class="page-hero" id="contact">
+        <div class="section-header">
+          <div class="section-kicker">Contact</div>
+          <h1 class="section-title">Want to join or collaborate?</h1>
+        </div>
+
+        <div class="contact-wrap">
+          <div class="contact-note">
+            <p>
+              Whether you’re a student looking to get involved, or an organization open to
+              a pilot project, we’d love to hear from you. Just be aware: we’re at the very
+              beginning, so things will be scrappy but honest.
+            </p>
+<p style="margin-top:0.7rem;">
+  You can reach us directly at <strong>eiconsulting101@gmail.com</strong>.
+</p>
+            <ul>
+              <li>Non-profits or small businesses that want clearer goals and plans.</li>
+              <li>Non-profits or small businesses okay with a student team learning as they go.</li>
+              <li>Students who care more about real work than titles.</li>
+            </ul>
+          </div>
+
+          <div class="contact-card">
+            <form onsubmit="event.preventDefault(); alert('Static demo form: connect this to email or a backend when you’re ready.');">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="field">
+                <label for="role">Are you a student or partner?</label>
+                <input id="role" type="text" placeholder="e.g. Student, club exec, non-profit, small biz" />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div class="field">
+                <label for="message">How would you like to be involved?</label>
+                <textarea
+                  id="message"
+                  placeholder="Tell us if you want to join EIC, propose a project, or just learn more."
+                  required
+                ></textarea>
+              </div>
+              <div class="contact-row">
+<div class="contact-meta">
+  Contact us at: <strong>eiconsulting101@gmail.com</strong>
+</div>
+                <button class="btn-primary btn-submit" type="submit">
+                  Send message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-inner">
+          <div>© <span id="year"></span> Elevate Impact Consulting (EIC).</div>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+<script>
+  function toggleNav() {
+    const nav = document.getElementById("nav-mobile");
+    nav.style.display =
+      nav.style.display === "none" || nav.style.display === "" ? "block" : "none";
+  }
+
+  function closeNav() {
+    const nav = document.getElementById("nav-mobile");
+    nav.style.display = "none";
+  }
+
+  // keep footer year working if you’re using it
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+</script>
+
+
+</body>
+</html>

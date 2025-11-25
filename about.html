@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Elevate Impact Consulting | About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header>
+  <div class="layout nav">
+<a href="index.html" class="brand">
+  <div class="brand-logo">
+    <img src="eic-logo.png" alt="Elevate Impact Consulting logo">
+  </div>
+  <div class="brand-text">
+    <strong>EIC · Elevate Impact</strong>
+    <span>Student Pro Bono Consulting</span>
+  </div>
+</a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+
+    <nav class="nav-links" id="nav-desktop">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="services.html">Services</a>
+      <a href="join.html">Join Us</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+
+  <div class="layout" id="nav-mobile" style="display:none;">
+    <nav class="nav-links-mobile">
+      <a href="index.html" onclick="closeNav()">Home</a>
+      <a href="about.html" class="active" onclick="closeNav()">About</a>
+      <a href="services.html" onclick="closeNav()">Services</a>
+      <a href="join.html" onclick="closeNav()">Join Us</a>
+      <a href="contact.html" class="nav-cta" onclick="closeNav()">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <div class="layout">
+      <section class="page-hero">
+        <div class="section-header">
+          <div class="section-kicker">About EIC</div>
+          <h1 class="section-title">A student-made, pro bono consulting association.</h1>
+          <p class="section-desc">
+            Elevate Impact Consulting was created by students who wanted more than case
+            competitions and theory. We wanted a place to practice real consulting work,
+            with real organizations, in a way that still feels safe and learning-focused.
+          </p>
+        </div>
+
+        <div class="grid">
+          <div class="about-card">
+            <p>
+              <strong>Our mission:</strong> give students the chance to develop real consulting
+              skills — research, problem-structuring, communication, and teamwork — while helping
+              clubs, non-profits, and small businesses move forward.
+            </p>
+            <br />
+            <p>
+              We don’t pretend to be a polished, long-running firm. We’re honest about being early,
+              and we treat that as a strength: it means we’re flexible, hungry, and open to feedback.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <p><strong>Right now, EIC is:</strong></p>
+            <ul>
+              <li>A founding group working on our first projects.</li>
+              <li>Experimenting with simple processes and templates.</li>
+              <li>Looking for partners who value learning and collaboration.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-header">
+          <div class="section-kicker">Values</div>
+          <h2 class="section-title">How we want EIC to feel.</h2>
+        </div>
+        <div class="grid service-grid">
+          <article class="card">
+            <h3>Honest about our stage</h3>
+            <p>We won’t fake experience we don’t have. We’re upfront that we’re early and learning.</p>
+          </article>
+          <article class="card">
+            <h3>Professional effort</h3>
+            <p>Even though it’s student-run and free, we still aim to communicate clearly and show up prepared.</p>
+          </article>
+          <article class="card">
+            <h3>Growth mindset</h3>
+            <p>Feedback isn’t personal — it’s how we refine our work and grow as a team.</p>
+          </article>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-inner">
+          <div>© <span id="year"></span> Elevate Impact Consulting (EIC).</div>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="join.html">Join Us</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+<script>
+  function toggleNav() {
+    const nav = document.getElementById("nav-mobile");
+    nav.style.display =
+      nav.style.display === "none" || nav.style.display === "" ? "block" : "none";
+  }
+
+  function closeNav() {
+    const nav = document.getElementById("nav-mobile");
+    nav.style.display = "none";
+  }
+
+  // keep footer year working if you’re using it
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+</script>
+
+
+</body>
+</html>

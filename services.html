@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Elevate Impact Consulting | Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header>
+  <div class="layout nav">
+<a href="index.html" class="brand">
+  <div class="brand-logo">
+    <img src="eic-logo.png" alt="Elevate Impact Consulting logo">
+  </div>
+  <div class="brand-text">
+    <strong>EIC · Elevate Impact</strong>
+    <span>Student Pro Bono Consulting</span>
+  </div>
+</a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+
+    <nav class="nav-links" id="nav-desktop">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="join.html">Join Us</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+
+  <div class="layout" id="nav-mobile" style="display:none;">
+    <nav class="nav-links-mobile">
+      <a href="index.html" onclick="closeNav()">Home</a>
+      <a href="about.html" onclick="closeNav()">About</a>
+      <a href="services.html" class="active" onclick="closeNav()">Services</a>
+      <a href="join.html" onclick="closeNav()">Join Us</a>
+      <a href="contact.html" class="nav-cta" onclick="closeNav()">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+
+  <main>
+    <div class="layout">
+      <section class="page-hero">
+        <div class="section-header">
+          <div class="section-kicker">Services</div>
+          <h1 class="section-title">What EIC focuses on first.</h1>
+          <p class="section-desc">
+            Because we’re new, we’ve chosen a few service areas that are realistic for a student
+            team and genuinely helpful for partners. All work is done pro bono.
+          </p>
+        </div>
+
+        <div class="grid service-grid">
+          <article class="card">
+            <h3>Strategy support for small teams &amp; organizations</h3>
+           <p>Help small teams and organizations get clear on what they’re trying to do this term.</p>
+            <ul>
+              <li>Goal-setting for the semester or year</li>
+              <li>Simple roadmaps &amp; initiative planning</li>
+              <li>Event or program planning support</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Lightweight research &amp; insights</h3>
+            <p>Basic research and simple analysis to support decisions.</p>
+            <ul>
+              <li>Desk research &amp; competitor scans</li>
+              <li>Surveys / feedback summaries</li>
+              <li>Short recommendation decks or memos</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Operations &amp; process clean-up</h3>
+            <p>Helping small teams make their workflows less chaotic.</p>
+            <ul>
+              <li>Mapping “how things work now”</li>
+              <li>Identifying pain points &amp; bottlenecks</li>
+              <li>Suggesting simple process tweaks</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-header">
+          <div class="section-kicker">Expectations</div>
+          <h2 class="section-title">What partners can expect (and not expect).</h2>
+        </div>
+        <div class="grid service-grid">
+          <article class="card">
+            <h3>What we aim to provide</h3>
+            <ul>
+              <li>Structured thinking and clear questions.</li>
+              <li>Honest timelines and regular check-ins.</li>
+              <li>Slides or docs you can actually use.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>What we can’t promise (yet)</h3>
+            <ul>
+              <li>Big “consulting firm” style outcomes.</li>
+              <li>Deep technical or legal advice.</li>
+              <li>Perfection on the first try.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-inner">
+          <div>© <span id="year"></span> Elevate Impact Consulting (EIC).</div>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="join.html">Join Us</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+<script>
+  function toggleNav() {
+    const nav = document.getElementById("nav-mobile");
+    nav.style.display =
+      nav.style.display === "none" || nav.style.display === "" ? "block" : "none";
+  }
+
+  function closeNav() {
+    const nav = document.getElementById("nav-mobile");
+    nav.style.display = "none";
+  }
+
+  // keep footer year working if you’re using it
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+</script>
+
+
+</body>
+</html>

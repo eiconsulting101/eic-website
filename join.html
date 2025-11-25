@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Elevate Impact Consulting | Join Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header>
+  <div class="layout nav">
+<a href="index.html" class="brand">
+  <div class="brand-logo">
+    <img src="eic-logo.png" alt="Elevate Impact Consulting logo">
+  </div>
+  <div class="brand-text">
+    <strong>EIC · Elevate Impact</strong>
+    <span>Student Pro Bono Consulting</span>
+  </div>
+</a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+
+    <nav class="nav-links" id="nav-desktop">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="join.html" class="active">Join Us</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+
+  <div class="layout" id="nav-mobile" style="display:none;">
+    <nav class="nav-links-mobile">
+      <a href="index.html" onclick="closeNav()">Home</a>
+      <a href="about.html" onclick="closeNav()">About</a>
+      <a href="services.html" onclick="closeNav()">Services</a>
+      <a href="join.html" class="active" onclick="closeNav()">Join Us</a>
+      <a href="contact.html" class="nav-cta" onclick="closeNav()">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+
+  <main>
+    <div class="layout">
+      <section class="page-hero">
+        <div class="section-header">
+          <div class="section-kicker">Join EIC</div>
+          <h1 class="section-title">Grow with us from day one.</h1>
+          <p class="section-desc">
+            We’re building EIC from the ground up. If you’re curious about consulting,
+            like working with people, and are okay with things being a bit scrappy at the start,
+            this might be a good fit.
+          </p>
+        </div>
+
+        <div class="grid service-grid">
+          <article class="card">
+            <h3>Who we’re looking for</h3>
+            <ul>
+              <li>Students who care about doing real work, not just collecting titles.</li>
+              <li>People comfortable asking questions and saying “I don’t know yet.”</li>
+              <li>Team players who actually follow through.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>What you’ll practice</h3>
+            <ul>
+              <li>Breaking down messy problems into clear steps.</li>
+              <li>Doing research and turning it into useful slides.</li>
+              <li>Talking to partners in a professional way.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>How to express interest</h3>
+            <p>
+              Use the form on the Contact page and mention that you’d like to join as a student
+              member. We’ll follow up with next steps once we’re onboarding.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-inner">
+          <div>© <span id="year"></span> Elevate Impact Consulting (EIC).</div>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+<script>
+  function toggleNav() {
+    const nav = document.getElementById("nav-mobile");
+    nav.style.display =
+      nav.style.display === "none" || nav.style.display === "" ? "block" : "none";
+  }
+
+  function closeNav() {
+    const nav = document.getElementById("nav-mobile");
+    nav.style.display = "none";
+  }
+
+  // keep footer year working if you’re using it
+  const yearSpan = document.getElementById("year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+</script>
+
+
+</body>
+</html>
