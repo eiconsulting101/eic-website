@@ -78,36 +78,61 @@
           </div>
 
           <div class="contact-card">
-            <form onsubmit="event.preventDefault(); alert('Static demo form: connect this to email or a backend when you’re ready.');">
-              <div class="field">
-                <label for="name">Name</label>
-                <input id="name" type="text" placeholder="Your name" required />
-              </div>
-              <div class="field">
-                <label for="role">Are you a student or partner?</label>
-                <input id="role" type="text" placeholder="e.g. Student, club exec, non-profit, small biz" />
-              </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input id="email" type="email" placeholder="you@example.com" required />
-              </div>
-              <div class="field">
-                <label for="message">How would you like to be involved?</label>
-                <textarea
-                  id="message"
-                  placeholder="Tell us if you want to join EIC, propose a project, or just learn more."
-                  required
-                ></textarea>
-              </div>
-              <div class="contact-row">
-<div class="contact-meta">
-  Contact us at: <strong>eiconsulting101@gmail.com</strong>
-</div>
-                <button class="btn-primary btn-submit" type="submit">
-                  Send message
-                </button>
-              </div>
-            </form>
+           <form action="https://formspree.io/f/xdkvbqdq" method="POST">
+  <div class="field">
+    <label for="name">Name</label>
+    <input
+      id="name"
+      name="name"
+      type="text"
+      placeholder="Your name"
+      required
+    />
+  </div>
+
+  <div class="field">
+    <label for="role">Are you a student or partner?</label>
+    <input
+      id="role"
+      name="role"
+      type="text"
+      placeholder="e.g. Student, non-profit, small biz"
+    />
+  </div>
+
+  <div class="field">
+    <label for="email">Email</label>
+    <input
+      id="email"
+      name="email"
+      type="email"
+      placeholder="you@example.com"
+      required
+    />
+  </div>
+
+  <div class="field">
+    <label for="message">How would you like to be involved?</label>
+    <textarea
+      id="message"
+      name="message"
+      placeholder="Tell us if you want to join EIC, propose a project, or just learn more."
+      required
+    ></textarea>
+  </div>
+
+  <!-- optional hidden field so you know it came from the website -->
+  <input type="hidden" name="source" value="EIC website contact form" />
+
+  <div class="contact-row">
+    <div class="contact-meta">
+      Contact us at: <strong>eiconsulting101@gmail.com</strong>
+    </div>
+    <button class="btn-primary btn-submit" type="submit">
+      Send message
+    </button>
+  </div>
+</form>
           </div>
         </div>
       </section>
