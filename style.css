@@ -46,12 +46,13 @@ a {
 /* HEADER / NAV */
 
 header {
-  position: relative;               /* no sticky, no overlap */
+  position: sticky;
+  top: 6px; /* move header slightly down so it's not cut off */
   z-index: 40;
-  background: #050b11;              /* solid bar instead of gradient */
+  background: #050b11;
   border-bottom: 1px solid var(--border);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.6);
 }
-
 
 .nav {
   height: var(--nav-height);
